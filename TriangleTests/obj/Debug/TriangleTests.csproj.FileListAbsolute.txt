@@ -1,0 +1,7 @@
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\bin\Debug\TriangleTests.dll
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\bin\Debug\TriangleTests.pdb
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\bin\Debug\Triangles.dll
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\bin\Debug\Triangles.pdb
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\obj\Debug\TriangleTests.csprojResolveAssemblyReference.cache
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\obj\Debug\TriangleTests.dll
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\TriangleTests\obj\Debug\TriangleTests.pdb

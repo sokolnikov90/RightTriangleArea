@@ -1,0 +1,4 @@
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\bin\Debug\Triangles.dll
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\bin\Debug\Triangles.pdb
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Debug\Triangles.dll
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Debug\Triangles.pdb

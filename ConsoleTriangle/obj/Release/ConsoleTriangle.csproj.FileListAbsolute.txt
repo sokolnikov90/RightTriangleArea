@@ -1,0 +1,8 @@
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\bin\Release\ConsoleTriangle.exe.config
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\bin\Release\ConsoleTriangle.exe
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\bin\Release\ConsoleTriangle.pdb
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\bin\Release\Triangles.dll
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\bin\Release\Triangles.pdb
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\obj\Release\ConsoleTriangle.csprojResolveAssemblyReference.cache
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\obj\Release\ConsoleTriangle.exe
+C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\ConsoleTriangle\obj\Release\ConsoleTriangle.pdb
