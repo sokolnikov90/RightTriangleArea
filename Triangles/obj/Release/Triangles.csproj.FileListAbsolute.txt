@@ -3,3 +3,8 @@ C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\bin\
 C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Release\Triangles.csprojResolveAssemblyReference.cache
 C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Release\Triangles.dll
 C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Release\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Release\Triangles.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\bin\Release\Triangles.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\bin\Release\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Release\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Release\Triangles.csprojResolveAssemblyReference.cache

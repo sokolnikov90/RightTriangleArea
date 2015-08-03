@@ -10,7 +10,7 @@ namespace Triangles
         {
             get
             {
-                return sides[0];
+                return sortedSideArray[0];
             }
         }
 
@@ -18,7 +18,7 @@ namespace Triangles
         {
             get
             {
-                return sides[1];
+                return sortedSideArray[1];
             }
         }
 
@@ -26,7 +26,7 @@ namespace Triangles
         {
             get
             {
-                return sides[2];
+                return sortedSideArray[2];
             }
         }
 
@@ -42,10 +42,8 @@ namespace Triangles
         public RightTriangle(double side_a, double side_b, double side_c)
             : base(side_a, side_b, side_c)
         {
-            Array.Sort(sides);
-            
-            if (Math.Abs(Math.Pow(side_a, 2) + Math.Pow(side_b, 2) - Math.Pow(side_c, 2)) > delta)
-                throw new TriangleException(string.Format("Triangle isn't right-angled: {0}^2 + {1}^2 != {2}^2", sides[0], sides[1], sides[2]));
+            if (Math.Abs(Math.Pow(sortedSideArray[0], 2) + Math.Pow(sortedSideArray[1], 2) - Math.Pow(sortedSideArray[2], 2)) > delta)
+                throw new TriangleException(string.Format("Triangle isn't right-angled: {0}^2 + {1}^2 != {2}^2", sortedSideArray[0], sortedSideArray[1], sortedSideArray[2]));
         }
 
         #endregion

@@ -102,6 +102,131 @@ namespace TriangleTests
         }
         #endregion
 
+        #region Identity methods
+
+        [TestMethod]
+        public void Identity_NullAsBothParams_ResultTrue()
+        {
+            // arrange
+            Triangle triangle1 = null;
+            Triangle triangle2 = null;
+            bool expected = true;
+
+            // act
+            bool result1 = triangle1 == triangle2;
+            bool result2 = triangle2 == triangle1;
+
+            // assert
+            Assert.AreEqual(expected, result1);
+            Assert.AreEqual(expected, result2);
+        }
+
+        [TestMethod]
+        public void Identity_OneNullParam_ResultFalse()
+        {
+            // arrange
+            Triangle triangle1 = null;
+            Triangle triangle2 = new Triangle(1, 1, 1);
+            bool expected = false;
+
+            // act
+            bool result1 = triangle1 == triangle2;
+            bool result2 = triangle2 == triangle1;
+
+            // assert
+            Assert.AreEqual(expected, result1);
+            Assert.AreEqual(expected, result2);
+        }
+
+        [TestMethod]
+        public void Identity_CorrectBothParams__ReturnTrue()
+        {
+            // arrange
+            Triangle triangle1 = new Triangle(1, 2, 3);
+            Triangle triangle2 = new Triangle(1, 2, 3);
+            bool expected = true;
+
+            // act
+            bool result1 = triangle1 == triangle2;
+            bool result2 = triangle2 == triangle1;
+
+            // assert
+            Assert.AreEqual(expected, result1);
+            Assert.AreEqual(expected, result2);
+        }
+
+        [TestMethod]
+        public void Identity_CorrectBothParams__ReturnFalse()
+        {
+            // arrange
+            Triangle triangle1 = new Triangle(1, 2, 3);
+            Triangle triangle2 = new Triangle(2, 3, 1);
+            bool expected = false;
+
+            // act
+            bool result1 = triangle1 == triangle2;
+            bool result2 = triangle2 == triangle1;
+
+            // assert
+            Assert.AreEqual(expected, result1);
+            Assert.AreEqual(expected, result2);
+        }
+        #endregion
+
+        #region Equals (congruent) methods
+
+        [TestMethod]
+        public void Equals_NullParam_ResultFalse()
+        {
+            // arrange
+            Triangle triangle1 = new Triangle(1, 1, 1);
+            Triangle triangle2 = null;
+            bool expected = false;
+
+            // act
+            bool result1 = triangle1.Equals(triangle2);
+
+            // assert
+            Assert.AreEqual(expected, result1);
+        }
+
+        [TestMethod]
+        public void Equals_CorrectParam__ReturnTrue()
+        {
+            // arrange
+            Triangle triangle1 = new Triangle(1, 2, 3);
+            Triangle triangle2 = new Triangle(3, 1, 2);
+            bool expected = true;
+
+            // act
+            bool result1 = triangle1.Equals(triangle2);
+            bool result2 = triangle2.Equals(triangle1);
+            bool result3 = triangle1.Equals(triangle1);
+
+            // assert
+            Assert.AreEqual(expected, result1);
+            Assert.AreEqual(expected, result2);
+            Assert.AreEqual(expected, result3);
+        }
+
+        [TestMethod]
+        public void Identity_CorrectParam__ReturnFalse()
+        {
+            // arrange
+            Triangle triangle1 = new Triangle(1, 2, 3);
+            Triangle triangle2 = new Triangle(2, 3, 2);
+            bool expected = false;
+
+            // act
+            bool result1 = triangle1.Equals(triangle2);
+            bool result2 = triangle2.Equals(triangle1);
+
+            // assert
+            Assert.AreEqual(expected, result1);
+            Assert.AreEqual(expected, result2);
+        }
+        #endregion
+
         [TestMethod]
         public void GetPerimeter_Triangle_Calculated()
         {
