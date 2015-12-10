@@ -1,97 +1,88 @@
 ﻿using System;
-using System.Runtime.Serialization;
+using System.Collections.ObjectModel;
+using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Triangles
 {
-    public class Triangle
+    [Serializable]
+    public class Triangle : ITriangle
     {
-        #region Fields
+        public ReadOnlyCollection<double> SideCollection
+        {
+            get
+            {
+                return Array.AsReadOnly(sideArray);
+            }
+        }
+
+        public virtual double Perimeter
+        {
+            get
+            {
+                return sideArray.Sum();
+            }
+        }
+
+        public virtual double Area
+        {
+            get
+            {
+                double semiperimeter = Perimeter / 2;
+                return Math.Sqrt(semiperimeter * (semiperimeter - sideArray[0]) * (semiperimeter - sideArray[1]) * (semiperimeter - sideArray[2]));
+            }
+        }
 
         protected const double delta = 0.00001;
 
-        protected readonly double[] sideArray = new double[3];
+        protected readonly double[] sideArray;
 
-        //For fast Equals(...)
-        protected readonly double[] sortedSideArray = new double[3]; 
-
-        protected readonly Lazy<double> perimeter, area;
-
-        #endregion
-
-        #region Properties
-
-        public double[] SideArray
+        public Triangle(double side_a, double side_b, double side_c)
         {
-            get
-            {
-                return sideArray;
-            }
-        }
+            Contract.Requires<ArgumentOutOfRangeException>(side_a > 0, "side_a must be greater than 0");
+            Contract.Requires<ArgumentOutOfRangeException>(side_b > 0, "side_b must be greater than 0");
+            Contract.Requires<ArgumentOutOfRangeException>(side_c > 0, "side_c must be greater than 0");
 
-        public double Perimeter
-        {
-            get
-            {
-                return perimeter.Value;
-            }
-        }
+            Contract.Requires<TriangleException>(side_a + side_b > side_c, "The sum side_a and side_b must be greater than side_c");
+            Contract.Requires<TriangleException>(side_a + side_c > side_b, "The sum side_a and side_c must be greater than side_b");
+            Contract.Requires<TriangleException>(side_b + side_c > side_a, "The sum side_b and side_c must be greater than side_a");
 
-        public double Area
-        {
-            get
-            {
-                return area.Value;
-            }
-        }
+            Contract.Ensures(sideArray != null && sideArray.Length == 3);
 
-        # endregion
-
-        #region Methods
-
-        protected double GetPerimeter()
-        {
-            return sideArray.Sum();
-        }
-
-        protected virtual double GetArea()
-        {
-            double semiperimeter = Perimeter / 2;
-            return Math.Sqrt(semiperimeter * (semiperimeter - sideArray[0]) * (semiperimeter - sideArray[1]) * (semiperimeter - sideArray[2]));
+            this.sideArray = new [] {side_a, side_b, side_c};
         }
 
         /// <summary>
-        /// Return TRUE if the triangles are not congruent.
+        /// Return TRUE if the triangles are identity.
         /// </summary>
         /// <param name="obj">Triangle for equals</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(System.Object obj)
+        public override bool Equals(object obj)
         {
-            if (obj == null)
-            {
-                return false;
-            }
-
             Triangle triangle = obj as Triangle;
 
             return Equals(triangle);
         }
 
         /// <summary>
-        /// Return TRUE if the triangles are not congruent.
+        /// Return TRUE if the triangles are identity.
         /// </summary>
         /// <param name="triangle">Triangle for equals</param>
         /// <returns>Boolean</returns>
         public bool Equals(Triangle triangle)
         {
-            if ((this == null) || (triangle == null))
+            if (ReferenceEquals(this, triangle))
+                return true;
+
+            if (triangle == null)
             {
                 return false;
             }
-
+            
             for (int i = 0; i <= 2; i++)
             {
-                if (sortedSideArray[i] != triangle.sortedSideArray[i])
+                if (Math.Abs(sideArray[i] - triangle.sideArray[i]) > delta)
                     return false;
             }
 
@@ -99,43 +90,43 @@ namespace Triangles
         }
         
         /// <summary>
-        /// Return TRUE if the triaangles are identity.
+        /// Return TRUE if the triaangles are congruent.
         /// </summary>
         /// <param name="triangle1">First triangle</param>
         /// <param name="triangle2">Second triangle</param>
         /// <returns>Boolean</returns>
         public static bool operator ==(Triangle triangle1, Triangle triangle2)
         {
-            if (object.ReferenceEquals(triangle1, triangle2))
+            if (ReferenceEquals(triangle1, triangle2))
                 return true;
 
-            if ((object.ReferenceEquals(triangle1, null)) || (object.ReferenceEquals(triangle2, null)))
+            if ((ReferenceEquals(triangle1, null)) || (ReferenceEquals(triangle2, null)))
                 return false;
 
-            if ((triangle1.sideArray[0] == triangle2.sideArray[0]) && (triangle1.sideArray[1] == triangle2.sideArray[1]) && (triangle1.sideArray[2] == triangle2.sideArray[2]))
-                return true;
+            double[] triangle1SortedSideArray = triangle1.sideArray;
+            Array.Sort(triangle1SortedSideArray);
 
-            return false;
+            double[] triangle2SortedSideArray = triangle2.sideArray;
+            Array.Sort(triangle2SortedSideArray);
+
+            for (int i = 0; i <= 2; i++)
+            {
+                if (Math.Abs(triangle1SortedSideArray[i] - triangle2SortedSideArray[i]) > delta)
+                    return false;
+            }
+
+            return true;
         }
 
         /// <summary>
-        /// Return TRUE if the triangles are not identity.
+        /// Return TRUE if the triangles are not congruent.
         /// </summary>
         /// <param name="triangle1">First triangle</param>
         /// <param name="triangle2">Second triangle</param>
         /// <returns>Boolean</returns>
         public static bool operator !=(Triangle triangle1, Triangle triangle2)
         {
-            if (object.ReferenceEquals(triangle1, triangle2))
-                return false;
-
-            if ((object.ReferenceEquals(triangle1, null)) || (object.ReferenceEquals(triangle2, null)))
-                return true;
-
-            if ((triangle1.sideArray[0] != triangle2.sideArray[0]) || (triangle1.sideArray[1] != triangle2.sideArray[1]) || (triangle1.sideArray[2] != triangle2.sideArray[2]))
-                return true;
-
-            return false;
+            return !(triangle1 == triangle2);
         }
 
         public override int GetHashCode()
@@ -150,63 +141,9 @@ namespace Triangles
             }
         }
 
-        public Triangle()
+        public override string ToString()
         {
-            perimeter = new Lazy<double>(GetPerimeter);
-            area = new Lazy<double>(GetArea);
+            return String.Format("Triangle({0:0.00000},{1:0.00000},{2:0.00000})", SideCollection[0], SideCollection[1], SideCollection[2]);
         }
-
-        public Triangle(double side_a, double side_b, double side_c)
-            : this()
-        {
-            if (side_a <= 0)
-                throw new ArgumentOutOfRangeException("side_a", side_a.ToString(), "The value must be greater than 0");
-
-            if (side_b <= 0)
-                throw new ArgumentOutOfRangeException("side_b", side_b.ToString(), "The value must be greater than 0");
-
-            if (side_c <= 0)
-                throw new ArgumentOutOfRangeException("side_c", side_c.ToString(), "The value must be greater than 0");
-
-            if (side_a > side_b + side_c)
-                throw new TriangleException("Triangle inequality failed: side_a can't be greater than side_b + side_c");
-
-            if (side_b > side_a + side_c)
-                throw new TriangleException("Triangle inequality failed: side_b can't be greater than side_a + side_c");
-
-            if (side_c > side_a + side_b)
-                throw new TriangleException("Triangle inequality failed: side_c can't be greater than side_a + side_b");
-
-            sideArray[0] = side_a;
-            sideArray[1] = side_b;
-            sideArray[2] = side_c;
-
-            Array.Copy(sideArray, sortedSideArray, 3);
-            Array.Sort(sortedSideArray);
-        }
-
-        #endregion
-
-        #region Exceptions
-
-        [Serializable]
-        public class TriangleException : Exception, ISerializable
-        {
-            public TriangleException()
-                : base() { }
-
-            public TriangleException(string message)
-                : base(message) { }
-
-            public TriangleException(string message, Exception inner)
-                : base(message, inner) { }
-
-            //It's enough for serialize "TriangleException" because we don't actually add new properties and simply rely on the message.
-            protected TriangleException(SerializationInfo info, StreamingContext ctxt)
-                : base(info, ctxt) { }
-        }
-
-        #endregion
-
     }
 }

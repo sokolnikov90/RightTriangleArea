@@ -2,3 +2,13 @@ C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\bin\
 C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\bin\Debug\Triangles.pdb
 C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Debug\Triangles.dll
 C:\Users\Пётр\Documents\Visual Studio 2012\Projects\Triangles\Triangles\obj\Debug\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Debug\Triangles.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Debug\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\bin\Debug\Triangles.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\bin\Debug\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\bin\Debug\Triangles.dll.CodeAnalysisLog.xml
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\bin\Debug\Triangles.dll.lastcodeanalysissucceeded
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Debug\Triangles.rewritten
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Debug\Decl\Triangles.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Debug\Decl\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\Triangles\obj\Debug\CodeContractAnalysisRun.log

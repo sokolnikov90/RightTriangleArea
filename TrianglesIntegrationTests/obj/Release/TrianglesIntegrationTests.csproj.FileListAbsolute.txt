@@ -1,0 +1,9 @@
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\obj\Release\TrianglesIntegrationTests.csprojResolveAssemblyReference.cache
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\bin\Release\TrianglesIntegrationTests.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\bin\Release\TrianglesIntegrationTests.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\bin\Release\nunit.framework.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\bin\Release\Triangles.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\bin\Release\Triangles.pdb
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\bin\Release\nunit.framework.xml
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\obj\Release\TrianglesIntegrationTests.dll
+C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesIntegrationTests\obj\Release\TrianglesIntegrationTests.pdb
