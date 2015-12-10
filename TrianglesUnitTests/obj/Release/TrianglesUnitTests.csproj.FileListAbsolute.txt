@@ -1,9 +1,0 @@
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\bin\Release\TrianglesUnitTests.dll
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\bin\Release\TrianglesUnitTests.pdb
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\bin\Release\nunit.framework.dll
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\bin\Release\Triangles.dll
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\bin\Release\Triangles.pdb
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\bin\Release\nunit.framework.xml
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\obj\Release\TrianglesUnitTests.csprojResolveAssemblyReference.cache
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\obj\Release\TrianglesUnitTests.dll
-C:\Users\Пётр\Documents\GitHub\RightTriangleArea\TrianglesUnitTests\obj\Release\TrianglesUnitTests.pdb
