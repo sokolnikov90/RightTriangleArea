@@ -1,0 +1,6 @@
+C:\Projects\RightTriangleArea\ShapeArea\bin\Debug\AreaController.dll
+C:\Projects\RightTriangleArea\ShapeArea\bin\Debug\AreaController.pdb
+C:\Projects\RightTriangleArea\ShapeArea\obj\Debug\ShapeArea.csprojResolveAssemblyReference.cache
+C:\Projects\RightTriangleArea\ShapeArea\obj\Debug\ShapeArea.csproj.CoreCompileInputs.cache
+C:\Projects\RightTriangleArea\ShapeArea\obj\Debug\AreaController.dll
+C:\Projects\RightTriangleArea\ShapeArea\obj\Debug\AreaController.pdb
