@@ -7,6 +7,7 @@
     /// <summary>
     /// Фигура Прямоугольный треугольник
     /// </summary>
+    [Serializable]
     public class RightTriangle : Triangle
     {
         /// <summary>

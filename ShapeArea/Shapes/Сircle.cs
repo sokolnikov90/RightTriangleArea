@@ -5,6 +5,7 @@
     /// <summary>
     /// Фигура Круг
     /// </summary>
+    [Serializable]
     public class Сircle : Shape
     {
         /// <summary>

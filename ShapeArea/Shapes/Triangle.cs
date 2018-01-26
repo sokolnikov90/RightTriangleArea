@@ -5,6 +5,7 @@ namespace ShapeArea
     /// <summary>
     /// Фигура Треугольник
     /// </summary>
+    [Serializable]
     public class Triangle : Shape
     {
         /// <summary>
